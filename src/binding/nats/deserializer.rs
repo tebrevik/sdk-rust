@@ -10,7 +10,7 @@ impl StructuredDeserializer for nats::Message {
         self,
         serializer: V,
     ) -> crate::message::Result<R> {
-        serializer.set_structured_event(self.data.to_vec())
+        serializer.set_structured_event(self.payload.to_vec())
     }
 }
 
